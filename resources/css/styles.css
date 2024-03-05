@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --font: 'Red Hat Display', sans-serif;
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+
+  --pale-blue: hsl(225, 100%, 98%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 94%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+html {
+  font-size: 16px;
+  font-family: var(--font);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-pale-blue);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  font: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+.credits {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 1.5rem;
+}
+
+#container {
+  background-color: var(--pale-blue);
+  border-radius: 20px;
+  width: 90%;
+  height: 550px;
+}
+
+.image-div img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.text-div {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
+.title {
+  color: var(--dark-blue);
+  margin: 15px 0;
+  font-weight: var(--fw-900);
+}
+
+.text-p {
+  color: var(--desaturated-blue);
+  font-weight: var(--fw-500);
+  padding-inline: 8px;
+}
+
+.plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block: 20px;
+}
+
+.plan-title {
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.plan-price,
+.plan a {
+  font-weight: var(--fw-500);
+}
+
+.plan-price {
+  color: var(--desaturated-blue);
+}
+
+.plan a {
+  text-decoration: underline;
+}
+
+.plan a:hover {
+  text-decoration: none;
+}
+
+.buttons .proceed {
+  background-color: var(--bright-blue);
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding-block: 15px;
+  color: var(--very-pale-blue);
+  font-weight: var(--fw-700);
+  margin-bottom: 15px;
+}
+
+.buttons .cancel {
+  background: none;
+  color: var(--desaturated-blue);
+  font-weight: var(--fw-700);
+  width: 100%;
+  padding-block: 15px;
+}
+
+.buttons .proceed:hover,
+.plan a:hover {
+  opacity: 0.65;
+}
+
+.buttons .cancel:hover,
+.credits a:hover {
+  color: var(--dark-blue);
+}
+
+@media only screen and (min-width: 450px) {
+  #container {
+    max-width: 350px;
+  }
+}
